@@ -63,4 +63,18 @@ docker tag <image-name> <registry-url>/<repository-name>
 
 ![container-registry](./images/push-to-acr.png)
 
-13.
+13. Now go to you resource group and create a new container app resource
+![container-app](./images/create-container.png)
+
+14. I ran into an issue of Azure unable to retrieve the image in Azure Container Registry because admin credentials are disabled
+
+![admin-acr-issue](./images/acr-admin-issue.png)
+
+15. Go back to the ACR dashboard, Click on properties in the settings tab and enable Admin user 
+![admin-acr-fix](./images/admin-acr-fix.png)
+
+16. Now we can create the container app using the image in ACR
+
+17. ![overview-app](./images/overview-app.png)
+
+18. If you run into a broken link, check if ingress target port matches the container app port
